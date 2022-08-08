@@ -6,3 +6,10 @@ for (let x = 1; x <= gridNum; x++) {
   appendDiv.classList.add('square');
   cont.appendChild(appendDiv);
 }
+
+let mousePosition = false;
+window.onmousedown = () => (mousePosition = true,
+                                  console.log(mousePosition))
+window.onmouseup = () => (mousePosition = false,
+                                  console.log(mousePosition))
+console.log(mousePosition)
