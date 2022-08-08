@@ -1,0 +1,15 @@
+.grids {
+    border: 1px red solid;
+    height: 431px;
+    width: 432px;
+    display: flex;
+    flex-wrap: wrap;
+}
+div.square {
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+}
+.clicked {
+    background-color: 'black'
+}
