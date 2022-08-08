@@ -13,3 +13,11 @@ window.onmousedown = () => (mousePosition = true,
 window.onmouseup = () => (mousePosition = false,
                                   console.log(mousePosition))
 console.log(mousePosition)
+
+
+sqrs.forEach(sq => {
+    sq.addEventListener('mousemove', () => {
+      if (mousePosition === true) {
+        sq.style.cssText = 'background-color: black'
+      }
+  })})
