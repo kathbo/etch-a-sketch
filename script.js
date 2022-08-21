@@ -17,18 +17,18 @@ function createSquares(num) {
   
   // var that determinates whether or not mouse is pressed 
   let mousePosition = false;
-  grid.onmousedown = () => (mousePosition = true,
-                            console.log(mousePosition))
-  window.onmouseup = () => (mousePosition = false,
-                                    console.log(mousePosition))
+  grid.onmousedown = () => (mousePosition = true);
+  window.onmouseup = () => (mousePosition = false);
+  
+  // colors the pressed squares
   sqrs.forEach(sq => {
     sq.addEventListener('mousemove', () => {
       if (mousePosition === true) {
-        console.log(sq)
         sq.style.cssText = 'background-color: black'
       }
     })
   })
 }
 
+// ??
 createSquares(20);
