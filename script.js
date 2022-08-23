@@ -35,3 +35,13 @@ createSquares(20);
 
 // color of squares
 let currentColor = 'grey'
+
+function makeUpHEX() {
+  let hex = [];
+  let possibilities = "abcdef1234567890"
+  for (let x = 0; x < 6; x++) {
+    let randomNum = Math.floor(Math.random() * (15 - 0 + 1))
+    hex.push(possibilities[randomNum])
+  }
+  return '#' + hex.join('')
+}
