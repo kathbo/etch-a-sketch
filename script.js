@@ -35,8 +35,10 @@ function createSquares(num) {
   })
 }
 
-// ??
-createSquares(20);
+let currentSize = 16;
+createSquares(currentSize);
+
+
 
 // color of squares
 let currentColor = 'grey'
