@@ -1,5 +1,6 @@
 let cont = document.querySelector('div.grids')
 
+// size
 function createSquares(num) { 
   // removes every previous square 
   while (cont.hasChildNodes()) { 
@@ -8,16 +9,16 @@ function createSquares(num) {
   // creates num amount of squares
   for (let x = 1; x <= Math.pow(num, 2); x++) {
     let appendDiv = document.createElement('div')
-    appendDiv.classList.add('square');
+    //appendDiv.style.cssText = `border: 1px solid black`;
     cont.appendChild(appendDiv);
   }
   
-  let sqrs = document.querySelectorAll('div.square')
+  let sqrs = document.querySelectorAll('.grids > div')
   let grid = document.querySelector('div.grids')
-  
+  document.querySelector('div.grids').style.cssText = `grid-template-columns: repeat(${num}, 1fr);`
   // var that determinates whether or not mouse is pressed 
   let mousePosition = false;
-  grid.onmousedown = () => (mousePosition = true);
+  window.onmousedown = () => (mousePosition = true);
   window.onmouseup = () => (mousePosition = false);
   
   // colors the pressed squares
@@ -26,10 +27,10 @@ function createSquares(num) {
       if (mousePosition === true) {
         if (currentColor == "grey") {
           sq.classList.add('clicked')
-        } else if (currentColor == "rainbow") {
+        } 
+        if (currentColor == "rainbow") {
           sq.style.cssText = `background-color: ${makeUpHEX()}`
         }
-        
       }
     })
   })
@@ -40,7 +41,7 @@ createSquares(currentSize);
 
 let btnsSize = document.querySelectorAll('.btnSize');
 btnsSize.forEach(btn => {
-  btn.addEventListener('click', e => {
+  btn.addEventListener('click', () => {
     createSquares(currentSize)
   })
 })
