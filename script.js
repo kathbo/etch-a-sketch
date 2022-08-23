@@ -38,7 +38,12 @@ function createSquares(num) {
 let currentSize = 16;
 createSquares(currentSize);
 
-
+let btnsSize = document.querySelectorAll('.btnSize');
+btnsSize.forEach(btn => {
+  btn.addEventListener('click', e => {
+    createSquares(currentSize)
+  })
+})
 
 // color of squares
 let currentColor = 'grey'
