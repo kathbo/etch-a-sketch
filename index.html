@@ -14,18 +14,18 @@
           <div class="size title">
             <p>size:</p>
             <div class="buttons">
-              <button onclick="createSquares(5)">small</button>
-              <button onclick="createSquares(20)">normal</button>
-              <button onclick="createSquares(34)">big</button>
-              <button onclick="createSquares(64)">huge</button> 
+              <button class="btnSize" onclick="currentSize = 5">small</button>
+              <button class="btnSize" onclick="currentSize = 16">normal</button>
+              <button class="btnSize" onclick="currentSize = 36">big</button>
+              <button class="btnSize" onclick="currentSize = 64">huge</button> 
             </div>
           </div>
         <div class="color title">
           <p>color:</p>
           <div class="buttons">
-            <button onclick='currentColor = "rainbow"; console.log(currentColor)'>rainbow</button>
-            <button onclick='currentColor = "grey"; console.log(currentColor)'>dark grey</button>
-            <button onclick='currentColor = "custom"; console.log(currentColor)'>custom</button>
+            <button onclick='currentColor = "rainbow"'>rainbow</button>
+            <button onclick='currentColor = "grey"'>dark grey</button>
+            <button onclick='currentColor = "custom"'>custom</button>
           </div>
         </div>
         <div class="delete title">
@@ -34,7 +34,7 @@
         </div>
         
         <div class="grids"></div>
-      </div>
-      <p>made by <a href="">berry</a></p>
+    </div>
+    <p>made by <a href="">berry</a></p>
 </body>
 </html>
