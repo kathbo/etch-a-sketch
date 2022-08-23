@@ -32,3 +32,6 @@ function createSquares(num) {
 
 // ??
 createSquares(20);
+
+// color of squares
+let currentColor = 'grey'
