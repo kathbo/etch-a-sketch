@@ -24,7 +24,12 @@ function createSquares(num) {
   sqrs.forEach(sq => {
     sq.addEventListener('mousemove', () => {
       if (mousePosition === true) {
-        sq.classList.add('clicked')
+        if (currentColor == "grey") {
+          sq.classList.add('clicked')
+        } else if (currentColor == "rainbow") {
+          sq.style.cssText = `background-color: ${makeUpHEX()}`
+        }
+        
       }
     })
   })
