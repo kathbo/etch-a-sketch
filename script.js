@@ -22,7 +22,7 @@ function createSquares(num) {
   
   // colors the pressed squares
   sqrs.forEach(sq => {
-    sq.addEventListener('mousemove', () => {
+    sq.addEventListener('mouseover', () => {
       if (mousePosition === true) {
         if (currentColor == "grey") {
           sq.classList.add('clicked')
