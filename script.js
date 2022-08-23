@@ -24,7 +24,7 @@ function createSquares(num) {
   sqrs.forEach(sq => {
     sq.addEventListener('mousemove', () => {
       if (mousePosition === true) {
-        sq.style.cssText = 'background-color: black'
+        sq.classList.add('clicked')
       }
     })
   })
