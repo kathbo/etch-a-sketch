@@ -1,15 +1,25 @@
-.grids {
-    border: 1px red solid;
-    height: 431px;
-    width: 432px;
+body {
+    background-color: #f8f7f6;
+  }
+  .flex {
     display: flex;
-    flex-wrap: wrap;
-}
-div.square {
-    width: 25px;
-    height: 25px;
-    border: 1px solid black;
-}
-.clicked {
-    background-color: 'black'
-}
+    justify-content: center;
+    align-items: center;
+  }
+  .title {
+    display: flex;
+    justify-content: space-between;
+  }
+  .grids {
+    border: 2px solid orange;
+    min-height: 350px;
+    min-width: 350px;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr)
+  }
+  
+  .clicked {
+    background-color: #2b2d2f;
+  }
+  
+  
