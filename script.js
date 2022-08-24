@@ -1,20 +1,19 @@
-let cont = document.querySelector('div.grids')
-
+let sqrs = document.querySelectorAll('.grids > div')
+let grid = document.querySelector('div.grids')
+  
 // size
 function createSquares(num) { 
   // removes every previous square 
-  while (cont.hasChildNodes()) { 
-    cont.removeChild(cont.firstElementChild)
+  while (grid.hasChildNodes()) { 
+    grid.removeChild(grid.firstElementChild)
   }
   // creates num amount of squares
   for (let x = 1; x <= Math.pow(num, 2); x++) {
     let appendDiv = document.createElement('div')
     //appendDiv.style.cssText = `border: 1px solid black`;
-    cont.appendChild(appendDiv);
+    grid.appendChild(appendDiv);
   }
   
-  let sqrs = document.querySelectorAll('.grids > div')
-  let grid = document.querySelector('div.grids')
   document.querySelector('div.grids').style.cssText = `grid-template-columns: repeat(${num}, 1fr);`
   // var that determinates whether or not mouse is pressed 
   let mousePosition = false;
@@ -60,5 +59,11 @@ function makeUpHEX() {
 }
 
 // erase
-
 let eraseBtn = document.querySelector('#eraser')
+
+
+
+
+//eraser function
+//delete function
+// this weird stoopid error????
