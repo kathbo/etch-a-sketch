@@ -1,3 +1,13 @@
+:root {
+  --gridSizeSmall: 250px;
+}
+
+body {
+  /* ????? */
+  height: 100vh; 
+  width: 100vw;
+  
+}
 body, button {
   background-color: #f8f7f6;
   font-family: 'Lacquer', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -8,13 +18,40 @@ body, button {
   justify-content: center;
   align-items: center;
 }
+.left {
+  min-width: var(--gridSizeSmall);  
+  display: grid;
+  gap: 0.5em
 
+}
+.left > .size {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+.left > .color {
+  grid-column: 2;
+  grid-row: 1;
+}
+.left > .delete {
+  grid-column: 2;
+  grid-row: 2;
+}
+.left:last-child {
+  justify-content: flex-end;
+}
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin: 0.8em 0 1em;
+}
 .buttons {
   display: grid;
   grid-template-columns: 1;
 }
 button {
   border: none;
+  font-size: 1.2em;
+  text-align: left;
 }
 
 
@@ -23,11 +60,12 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  width: 1fr;
 }
 .grids {
-  border: 2px solid orange;
-  min-height: 250px;
-  min-width: 250px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+  min-height: var(--gridSizeSmall);
+  min-width: var(--gridSizeSmall);
   display: grid;
   grid-template-columns: repeat(16, 1fr)
 }
@@ -35,6 +73,13 @@ button {
 .clicked {
   background-color: #2b2d2f;
 }
-
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-bottom: 1em;
+}
 
 
