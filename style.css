@@ -2,6 +2,10 @@ body, button {
   background-color: #f8f7f6;
   font-family: 'Lacquer', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.buttons {
+  display: grid;
+  grid-template-columns: 1;
+}
 button {
   border: none;
 }
@@ -9,6 +13,7 @@ button {
 
 .flex {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -18,8 +23,8 @@ button {
 }
 .grids {
   border: 2px solid orange;
-  min-height: 350px;
-  min-width: 350px;
+  min-height: 250px;
+  min-width: 250px;
   display: grid;
   grid-template-columns: repeat(16, 1fr)
 }
@@ -27,4 +32,6 @@ button {
 .clicked {
   background-color: #2b2d2f;
 }
+
+
 
