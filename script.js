@@ -58,3 +58,7 @@ function makeUpHEX() {
   }
   return '#' + hex.join('')
 }
+
+// erase
+
+let eraseBtn = document.querySelector('#eraser')
