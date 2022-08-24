@@ -1,25 +1,30 @@
-body {
-    background-color: #f8f7f6;
-  }
-  .flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .title {
-    display: flex;
-    justify-content: space-between;
-  }
-  .grids {
-    border: 2px solid orange;
-    min-height: 350px;
-    min-width: 350px;
-    display: grid;
-    grid-template-columns: repeat(16, 1fr)
-  }
-  
-  .clicked {
-    background-color: #2b2d2f;
-  }
-  
-  
+body, button {
+  background-color: #f8f7f6;
+  font-family: 'Lacquer', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+button {
+  border: none;
+}
+
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+.grids {
+  border: 2px solid orange;
+  min-height: 350px;
+  min-width: 350px;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr)
+}
+
+.clicked {
+  background-color: #2b2d2f;
+}
+
