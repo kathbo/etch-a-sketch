@@ -1,6 +1,11 @@
 let sqrs = document.querySelectorAll('.grids > div')
 let grid = document.querySelector('div.grids')
-  
+
+// var that determinates whether or not mouse is pressed 
+let mousePosition = false;
+window.onmousedown = () => (mousePosition = true);
+window.onmouseup = () => (mousePosition = false);
+
 // size
 function createSquares(num) { 
   // removes every previous square 
@@ -15,13 +20,11 @@ function createSquares(num) {
   }
   
   document.querySelector('div.grids').style.cssText = `grid-template-columns: repeat(${num}, 1fr);`
-  // var that determinates whether or not mouse is pressed 
-  let mousePosition = false;
-  window.onmousedown = () => (mousePosition = true);
-  window.onmouseup = () => (mousePosition = false);
   
-  // colors the pressed squares
-  sqrs.forEach(sq => {
+
+
+// colors the pressed squares
+  document.querySelectorAll('.grids > div').forEach(sq => {
     sq.addEventListener('mouseover', () => {
       if (mousePosition === true) {
         if (currentColor == "grey") {
@@ -33,6 +36,8 @@ function createSquares(num) {
       }
     })
   })
+
+  
 }
 
 let currentSize = 16;
@@ -58,9 +63,20 @@ function makeUpHEX() {
   return '#' + hex.join('')
 }
 
+
+
 // erase
 let eraseBtn = document.querySelector('#eraser')
 
+eraseBtn.addEventListener('click', () => {
+  document.querySelectorAll('.grids > div').forEach(sq => {
+    sq.addEventListener('mouseover', () => {
+      if (mousePosition === true) {
+        sq.style.cssText = "background-color: none"
+      }
+    })
+  })
+})
 
 
 
