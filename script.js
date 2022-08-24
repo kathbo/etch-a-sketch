@@ -78,6 +78,14 @@ eraseBtn.addEventListener('click', () => {
   })
 })
 
+// reset
+let resetBtn = document.querySelector('#reset');
+
+resetBtn.addEventListener('click', () => {
+  document.querySelectorAll('.grids > div').forEach(sq => {
+    sq.style.cssText = "background-color: none"
+  })
+})
 
 
 //eraser function
