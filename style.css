@@ -2,6 +2,13 @@ body, button {
   background-color: #f8f7f6;
   font-family: 'Lacquer', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .buttons {
   display: grid;
   grid-template-columns: 1;
@@ -11,15 +18,11 @@ button {
 }
 
 
-.flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.title {
+
+.settingsSection {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 .grids {
   border: 2px solid orange;
