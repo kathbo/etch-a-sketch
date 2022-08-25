@@ -84,6 +84,19 @@ footer {
   right: 0;
   left: 0;
   margin-bottom: 1em;
+  color: #1FCAE0
+}
+footer > p > a {
+  color: #1FCAE0;
+  text-decoration: none;
+  -o-transition: color 0.2s linear; /* opera */
+  -ms-transition: color 0.2s linear; /* IE 10 */
+  -moz-transition: color 0.2s linear; /* Firefox */
+  -webkit-transition: color 0.2s linear; /*safari and chrome */
+}
+footer > p > a:hover {
+  color: blue;
+  cursor: pointer
 }
 
 
