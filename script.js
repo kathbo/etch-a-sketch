@@ -88,6 +88,5 @@ resetBtn.addEventListener('click', () => {
 })
 
 
-//eraser function
-//delete function
+// distinguish which button is pressed
 // this weird stoopid error????
