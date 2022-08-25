@@ -21,13 +21,13 @@ body, button {
 .left {
   min-width: var(--gridSizeSmall);  
   display: grid;
-  gap: 0.5em
-
+  gap: 0.5em;
 }
 .left > .size {
   grid-column: 1;
   grid-row: 1 / span 2;
 }
+
 .left > .color {
   grid-column: 2;
   grid-row: 1;
@@ -50,7 +50,10 @@ button {
   font-size: 1.2em;
   text-align: left;
 }
-
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
 
 
 .settingsSection {
