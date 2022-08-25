@@ -54,7 +54,12 @@ button {
   display: flex;
   flex-direction: column;
 }
-
+button#rainbowButton {
+  display: inline-flex;
+}
+button#reset {
+  color: #F90000
+}
 
 .settingsSection {
   display: grid;
