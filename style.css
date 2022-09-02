@@ -21,6 +21,7 @@ body, button {
 .left {
   min-width: var(--gridSizeSmall);  
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0.5em;
 }
 .left > .size {
@@ -67,7 +68,7 @@ button#reset {
 
 .settingsSection {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.7fr 1fr;
   /* display: flex;
   justify-content: space-between;
   align-items: baseline;
