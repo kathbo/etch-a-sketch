@@ -3,8 +3,8 @@ let grid = document.querySelector('div.grids')
 
 // var that determinates whether or not mouse is pressed 
 let mousePosition = false;
-window.onmousedown = () => (mousePosition = true);
-window.onmouseup = () => (mousePosition = false);
+document.body.onmousedown = () => (mousePosition = true);
+document.body.onmouseup = () => (mousePosition = false);
 
 // size
 function createSquares(num) { 
@@ -87,6 +87,8 @@ resetBtn.addEventListener('click', () => {
   })
 })
 
-
+// erased doesnt work properly
+// rainbow has a president over grey
 // distinguish which button is pressed
 // this weird stoopid error????
+// color of gray button
