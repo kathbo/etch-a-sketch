@@ -1,5 +1,7 @@
 let sqrs = document.querySelectorAll('.grids > div')
 let grid = document.querySelector('div.grids')
+let resetBtn = document.querySelector('#reset');
+
 
 // var that determinates whether or not mouse is pressed 
 let mousePosition = false;
@@ -20,10 +22,8 @@ function createSquares(num) {
   }
   
   document.querySelector('div.grids').style.cssText = `grid-template-columns: repeat(${num}, 1fr);`
-  
 
-
-// colors the pressed squares
+// colors a pressed square
   document.querySelectorAll('.grids > div').forEach(sq => {
     sq.addEventListener('mouseover', () => {
       if (mousePosition === true) {
@@ -36,11 +36,9 @@ function createSquares(num) {
       }
     })
   })
-
-  
 }
 
-let currentSize = 16;
+let currentSize = 16; // default value
 createSquares(currentSize);
 
 let btnsSize = document.querySelectorAll('.btnSize');
@@ -50,8 +48,14 @@ btnsSize.forEach(btn => {
   })
 })
 
-// color of squares
-let currentColor = 'grey'
+// current mode
+let currentMode = 'color' // default
+
+
+
+
+// *** COLOR ***
+let currentColor = 'grey' // default
 
 function makeUpHEX() {
   let hex = [];
@@ -64,31 +68,42 @@ function makeUpHEX() {
 }
 
 
-
+// *** REMOVAL ***
 // erase
 let eraseBtn = document.querySelector('#eraser')
 
-eraseBtn.addEventListener('click', () => {
-  document.querySelectorAll('.grids > div').forEach(sq => {
-    sq.addEventListener('mouseover', () => {
-      if (mousePosition === true) {
-        sq.style.cssText = "background-color: none"
-      }
-    })
+document.querySelectorAll('.grids > div').forEach(sq => {
+  sq.addEventListener('moveover', () => {
+    if (mousePosition === true) {
+      sq.style.cssText = "background-color: none"
+    }
   })
 })
+// eraseBtn.addEventListener('click', () => {
+//   document.querySelectorAll('.grids > div').forEach(sq => {
+//     sq.addEventListener('mouseover', () => {
+//       if (mousePosition === true) {
+//         sq.style.cssText = "background-color: none"
+//       }
+//     })
+//   })
+// })
 
 // reset
-let resetBtn = document.querySelector('#reset');
-
 resetBtn.addEventListener('click', () => {
   document.querySelectorAll('.grids > div').forEach(sq => {
     sq.style.cssText = "background-color: none"
   })
 })
 
-// erased doesnt work properly
+
+
+
+
+// delete section's p text
+// color of gray 
+
+// erase doesnt work properly
 // rainbow has a president over grey
 // distinguish which button is pressed
-// this weird stoopid error????
-// color of gray button
+// *this weird stoopid error????
