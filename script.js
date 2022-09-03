@@ -34,8 +34,33 @@ function createNewGrid(size) {
     insertSquares(size);
 }
 
+let currentMode = gray; // default
 
-  // colors a pressed square
+const rainbowBtn = document.querySelector('#rainbowButton');
+const grayBtn = document.querySelector('#grayBtn');
+const eraserBtn = document.querySelector('#eraser');
+const resetBtn = document.querySelector('#reset');
+
+rainbowBtn.onclick = () => currentMode = rainbow;
+grayBtn.onclick = () => currentMode = gray;
+eraserBtn.onclick = () => currentMode = erase;
+
+
+
+// var that determinates whether or not mouse is pressed 
+let mousePosition = false;
+document.body.onmousedown = () => (mousePosition = true);
+document.body.onmouseup = () => (mousePosition = false);
+
+document.querySelectorAll(sqrs).forEach(sq => {
+  sq.addEventListener('mouseover', () => {
+    if (mousePosition === true) {
+      sq.style.cssText = `background-color: ${currentColor}`
+    }
+  })
+})
+
+// colors a pressed square
     document.querySelectorAll('.grids > div').forEach(sq => {
       sq.addEventListener('mouseover', () => {
         if (mousePosition === true) {
@@ -48,11 +73,6 @@ function createNewGrid(size) {
         }
       })
     })
-  
-const rainbowBtn = document.querySelector('#rainbowButton');
-const grayBtn = document.querySelector('#grayBtn');
-const eraserBtn = document.querySelector('#eraser');
-const resetBtn = document.querySelector('#reset');
 
 
 // delete section's p text
