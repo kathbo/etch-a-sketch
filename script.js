@@ -34,14 +34,24 @@ function createNewGrid(size) {
     insertSquares(size);
 }
 
-let currentMode = gray; // default
+let currentColor = gray; // default
+
+function makeUpHEX() {
+  let hex = [];
+  let possibilities = "abcdef1234567890"
+  for (let x = 0; x < 6; x++) {
+    let randomNum = Math.floor(Math.random() * (15 - 0 + 1))
+    hex.push(possibilities[randomNum])
+  }
+  return '#' + hex.join('')
+}
 
 const rainbowBtn = document.querySelector('#rainbowButton');
 const grayBtn = document.querySelector('#grayBtn');
 const eraserBtn = document.querySelector('#eraser');
 const resetBtn = document.querySelector('#reset');
 
-rainbowBtn.onclick = () => currentMode = rainbow;
+rainbowBtn.onclick = () => currentColor = rainbow;
 grayBtn.onclick = () => currentMode = gray;
 eraserBtn.onclick = () => currentMode = erase;
 
@@ -61,18 +71,18 @@ document.querySelectorAll(sqrs).forEach(sq => {
 })
 
 // colors a pressed square
-    document.querySelectorAll('.grids > div').forEach(sq => {
-      sq.addEventListener('mouseover', () => {
-        if (mousePosition === true) {
-          if (currentColor == "grey") {
-            sq.classList.add('clicked')
-          } 
-          if (currentColor == "rainbow") {
-            sq.style.cssText = `background-color: ${makeUpHEX()}`
-          }
-        }
-      })
-    })
+    // document.querySelectorAll('.grids > div').forEach(sq => {
+    //   sq.addEventListener('mouseover', () => {
+    //     if (mousePosition === true) {
+    //       if (currentColor == "grey") {
+    //         sq.classList.add('clicked')
+    //       } 
+    //       if (currentColor == "rainbow") {
+    //         sq.style.cssText = `background-color: ${makeUpHEX()}`
+    //       }
+    //     }
+    //   })
+    // })
 
 
 // delete section's p text
