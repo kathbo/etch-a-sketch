@@ -34,7 +34,7 @@ function createNewGrid(size) {
     insertSquares(size);
 }
 
-let currentColor = gray; // default
+//let currentColor = gray; // default
 
 function makeUpHEX() {
   let hex = [];
@@ -51,18 +51,17 @@ const grayBtn = document.querySelector('#grayBtn');
 const eraserBtn = document.querySelector('#eraser');
 const resetBtn = document.querySelector('#reset');
 
-rainbowBtn.onclick = () => currentColor = rainbow;
-grayBtn.onclick = () => currentMode = gray;
-eraserBtn.onclick = () => currentMode = erase;
-
-
+let currentMode = 'gray';
+rainbowBtn.onclick = () => currentMode = 'color';
+grayBtn.onclick = () => currentMode = 'gray';
+eraserBtn.onclick = () => currentMode = 'erase';
 
 // var that determinates whether or not mouse is pressed 
 let mousePosition = false;
 document.body.onmousedown = () => (mousePosition = true);
 document.body.onmouseup = () => (mousePosition = false);
 
-document.querySelectorAll(sqrs).forEach(sq => {
+document.querySelectorAll('.grids > div').forEach(sq => {
   sq.addEventListener('mouseover', () => {
     if (mousePosition === true) {
       sq.style.cssText = `background-color: ${currentColor}`
