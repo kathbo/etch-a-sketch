@@ -31,6 +31,7 @@ function insertSquares(size) {
 function createNewGrid(size) { 
     clearGrid();
     insertSquares(size);
+    colorSquares();
 }
 
 //let currentColor = gray; // default
@@ -54,39 +55,37 @@ let currentMode = 'gray';
 rainbowBtn.onclick = () => currentMode = 'color';
 grayBtn.onclick = () => currentMode = 'gray';
 eraserBtn.onclick = () => currentMode = 'erase';
-
-// var that determinates whether or not mouse is pressed 
-let mousePosition = false;
-grid.onmousedown = () => (mousePosition = true);
-grid.onmouseup = () => (mousePosition = false);
-
-document.querySelectorAll('.grids > div').forEach(sq => {
-  sq.addEventListener('mouseover', () => {
-    if (mousePosition === true) {
-      if (currentMode === 'color') {
-        sq.style.cssText = `background-color: ${makeUpHEX()}`
-      }
-      else if (currentMode === 'erase') {
-        sq.style.cssText = 'background-color: none'
-      }
-      else {
-        sq.style.cssText = 'background-color: #2b2d2f'
-      }
-    }
-    sq.ondragstart = function() {
-      return false;
-    };
-  })
-})
-
 resetBtn.addEventListener('click', () => {
   document.querySelectorAll('.grids > div').forEach(sq => {
     sq.style.cssText = "background-color: none"
   })
 })
 
+// var that determinates whether or not mouse is pressed 
+let mousePosition = false;
+grid.onmousedown = () => (mousePosition = true);
+grid.onmouseup = () => (mousePosition = false);
 
-// delete section's p text
-// color of gray 
+function colorSquares() {
+  document.querySelectorAll('.grids > div').forEach(sq => {
+    sq.addEventListener('mouseover', () => {
+      if (mousePosition === true) {
+        if (currentMode === 'color') {
+          sq.style.cssText = `background-color: ${makeUpHEX()}`
+        }
+        else if (currentMode === 'erase') {
+          sq.style.cssText = 'background-color: none'
+        }
+        else {
+          sq.style.cssText = 'background-color: #2b2d2f'
+        }
+      }
+      sq.ondragstart = function() {
+        return false;
+      };
+    })
+  })
+}
+
 
 // distinguish which button is pressed
