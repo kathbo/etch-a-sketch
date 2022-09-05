@@ -64,8 +64,22 @@ document.body.onmouseup = () => (mousePosition = false);
 document.querySelectorAll('.grids > div').forEach(sq => {
   sq.addEventListener('mouseover', () => {
     if (mousePosition === true) {
-      sq.style.cssText = `background-color: ${currentColor}`
+      if (currentMode === 'color') {
+        sq.style.cssText = `background-color: ${makeUpHEX()}`
+      }
+      else if (currentMode === 'erase') {
+        sq.style.cssText = 'background-color: none'
+      }
+      else {
+        sq.style.cssText = 'background-color: gray'
+      }
     }
+  })
+})
+
+resetBtn.addEventListener('click', () => {
+  document.querySelectorAll('.grids > div').forEach(sq => {
+    sq.style.cssText = "background-color: none"
   })
 })
 
@@ -87,7 +101,5 @@ document.querySelectorAll('.grids > div').forEach(sq => {
 // delete section's p text
 // color of gray 
 
-// erase doesnt work properly
-// rainbow has a president over grey
 // distinguish which button is pressed
 // *this weird stoopid error????
