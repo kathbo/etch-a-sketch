@@ -57,8 +57,8 @@ eraserBtn.onclick = () => currentMode = 'erase';
 
 // var that determinates whether or not mouse is pressed 
 let mousePosition = false;
-document.body.onmousedown = () => (mousePosition = true);
-document.body.onmouseup = () => (mousePosition = false);
+grid.onmousedown = () => (mousePosition = true);
+grid.onmouseup = () => (mousePosition = false);
 
 document.querySelectorAll('.grids > div').forEach(sq => {
   sq.addEventListener('mouseover', () => {
@@ -73,6 +73,9 @@ document.querySelectorAll('.grids > div').forEach(sq => {
         sq.style.cssText = 'background-color: #2b2d2f'
       }
     }
+    sq.ondragstart = function() {
+      return false;
+    };
   })
 })
 
@@ -87,4 +90,3 @@ resetBtn.addEventListener('click', () => {
 // color of gray 
 
 // distinguish which button is pressed
-// *this weird stoopid error????
