@@ -124,5 +124,23 @@ footer > p > a:hover {
 @media (min-width: 600px) {
   .flex {
     flex-direction: row;
-  }  
+  }
+  
+  .left > h1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+  .left > .size {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+  
+  .left > .color {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+  .left > .delete {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+  }
 }
