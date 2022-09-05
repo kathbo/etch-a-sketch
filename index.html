@@ -17,16 +17,16 @@
       <div class="size settingsSection">
         <p>size:</p>
         <div class="buttons">
-          <button class="btnSize" onclick="currentSize = 5">small</button>
-          <button class="btnSize" onclick="currentSize = 16">normal</button>
-          <button class="btnSize" onclick="currentSize = 36">big</button>
-          <button class="btnSize" onclick="currentSize = 64">huge</button> 
+          <button class="btnSize" id='smallBtn'>small</button>
+          <button class="btnSize" id='normalBtn'>normal</button>
+          <button class="btnSize" id='bigBtn'>big</button>
+          <button class="btnSize" id='hugeBtn'>huge</button> 
         </div>
       </div>
       <div class="color settingsSection">
         <p>color:</p>
         <div class="buttons">
-          <button id="rainbowButton" onclick='currentColor = "rainbow"'>
+          <button id="rainbowButton">
             <span style="color: #C126DE">r</span>
             <span style="color: #0DFF11">a</span>
             <span style="color: #10AEDE">i</span>
@@ -34,7 +34,7 @@
             <span style="color: #DE8226">b</span>
             <span style="color: #FF1985">o</span>
             <span style="color: #7CDE04">w</span>
-          <button onclick='currentColor = "grey"'>dark grey</button>
+          <button id='grayBtn'>dark grey</button>
         </div>
       </div>
       <div class="delete settingsSection">
