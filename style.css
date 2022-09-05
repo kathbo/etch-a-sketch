@@ -71,7 +71,7 @@ button#reset {
 
 .settingsSection {
   display: grid;
-  grid-template-columns: 0.7fr 1fr;
+  grid-template-columns: 0.6fr 0.8fr;
   /* display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -87,9 +87,7 @@ button#reset {
   grid-template-columns: repeat(16, 1fr)
 }
 
-.clicked {
-  background-color: #2b2d2f;
-}
+
 footer {
   text-align: center;
   position: fixed;
