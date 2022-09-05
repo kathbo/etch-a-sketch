@@ -21,8 +21,7 @@ function clearGrid() {
 }
 function insertSquares(size) {
     for (let x = 1; x <= Math.pow(size, 2); x++) {
-        let appendDiv = document.createElement('div'); // ????????????????
-        appendDiv.style.cssText = 'border: 0.5px solid black'
+        let appendDiv = document.createElement('div');
         grid.appendChild(appendDiv);
     }
       grid.style.cssText = `grid-template-columns: repeat(${size}, 1fr);`
