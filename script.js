@@ -70,7 +70,7 @@ document.querySelectorAll('.grids > div').forEach(sq => {
         sq.style.cssText = 'background-color: none'
       }
       else {
-        sq.style.cssText = 'background-color: gray'
+        sq.style.cssText = 'background-color: #2b2d2f'
       }
     }
   })
@@ -81,20 +81,6 @@ resetBtn.addEventListener('click', () => {
     sq.style.cssText = "background-color: none"
   })
 })
-
-// colors a pressed square
-    // document.querySelectorAll('.grids > div').forEach(sq => {
-    //   sq.addEventListener('mouseover', () => {
-    //     if (mousePosition === true) {
-    //       if (currentColor == "grey") {
-    //         sq.classList.add('clicked')
-    //       } 
-    //       if (currentColor == "rainbow") {
-    //         sq.style.cssText = `background-color: ${makeUpHEX()}`
-    //       }
-    //     }
-    //   })
-    // })
 
 
 // delete section's p text
