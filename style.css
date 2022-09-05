@@ -21,7 +21,7 @@ body, button {
 .left {
   min-width: var(--gridSizeSmall);  
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.9fr 1fr;
   gap: 0.5em;
 }
 .left > .size {
