@@ -168,6 +168,7 @@ footer > p > a:hover {
   }
   .left {
     position: relative;
+    gap: 0.75em
     
   }
   h1 {
