@@ -1,5 +1,6 @@
 :root {
   --gridSizeSmall: 250px;
+  --gridSizeMedium: 350px;
 }
 * { box-sizing: border-box; }
 
@@ -121,11 +122,24 @@ footer > p > a:hover {
   text-decoration-color: #1FCAE0;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .flex {
     flex-direction: row;
+    height: 100vh;
   }
-  
+  .left {
+    gap: 0.5em;
+  }
+  h1 {
+    text-align: left;
+    margin: 0 0 1em;
+  }
+  .settingsSection.size {
+    grid-template-columns: 0.6fr 1fr;
+  }
+  .settingsSection.color {
+    margin-bottom: 0;
+  }
   .left > h1 {
     grid-column: 1 / span 2;
     grid-row: 1;
@@ -142,5 +156,9 @@ footer > p > a:hover {
   .left > .delete {
     grid-column: 1 / span 2;
     grid-row: 4;
+  }
+  .grids {
+    min-height: var(--gridSizeMedium);
+    min-width: var(--gridSizeMedium);
   }
 }
