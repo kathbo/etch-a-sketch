@@ -86,6 +86,3 @@ function colorSquares() {
     })
   })
 }
-
-
-// distinguish which button is pressed
