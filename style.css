@@ -116,7 +116,11 @@ footer > p > a:hover {
   cursor: pointer
 }
 
-/* js classes */
+button:hover {
+  transform: translateX(10px);
+}
+
+/* js class */
 .clicked-button {
   text-decoration: underline;
   text-decoration-color: #1FCAE0;
