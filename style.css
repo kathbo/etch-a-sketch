@@ -2,7 +2,7 @@
   --gridSizeSmall: 250px;
   --gridSizeMedium: 350px;
   --gridSizeLarge: 450px;
-  --gridSizeBig: 600px;
+  --gridSizeBig: 500px;
 }
 * { box-sizing: border-box; }
 
@@ -94,8 +94,6 @@ button#reset { color: #F90000;}
   display: grid;
   grid-template-columns: repeat(16, 1fr)
 }
-
-
 footer {
   text-align: center;
   position: fixed;
@@ -180,5 +178,15 @@ footer > p > a:hover {
     z-index: 1;
     min-height: var(--gridSizeLarge);
     min-width: var(--gridSizeLarge);
+  }
+}
+@media (min-width: 1100px) {
+  h1 {
+    font-size: 2.2em;
+    top: -1.5em
+  }
+  .grids {
+    min-height: var(--gridSizeBig);
+    min-width: var(--gridSizeBig);
   }
 }
